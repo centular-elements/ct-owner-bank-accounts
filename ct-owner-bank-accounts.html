@@ -88,13 +88,17 @@ Element for managing an owner&#39;s bank accounts
         ownerId: String
       },
 
+      observers: [
+        '_init(ownerId)'
+      ],
+
       refresh: function() {
         if (this.ownerId) {
           this._init();
         }
       },
 
-      init: function() {
+      _init: function() {
         this.refreshing = true;
         this._getBankAccounts();
       },
