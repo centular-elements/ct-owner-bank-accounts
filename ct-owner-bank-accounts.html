@@ -85,6 +85,11 @@ Element for managing an owner&#39;s bank accounts
       behaviors: [CT.Behaviours.ApiConsumer],
 
       properties: {
+        refreshing: {
+          type: Boolean,
+          notify: true
+        },
+
         ownerId: String
       },
 
