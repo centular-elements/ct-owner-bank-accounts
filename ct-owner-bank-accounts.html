@@ -53,7 +53,7 @@ Element for managing an owner&#39;s bank accounts
                     <td>[[item.bank]]</td>
                     <td>[[item.accountType.name]]</td>
                     <td class="text-center">
-                      <paper-button class="table-button btn-primary btn-sm" on-tap="_viewBankAccountTapped" raised>View</paper-button>
+                      <paper-button class="table-button btn-primary btn-sm" on-tap="_editBankAccountTapped" raised>Edit</paper-button>
                     </td>
                   </tr>
                 </template>
@@ -115,8 +115,8 @@ Element for managing an owner&#39;s bank accounts
                 .finally(this.set.bind(this, 'refreshing', false));
       },
 
-      _viewBankAccountTapped: function (e) {
-        this.fire('ct-page-to', '/view-bank-account/' + e.model.item.id);
+      _editBankAccountTapped: function (e) {
+        this.fire('ct-page-to', '/edit-bank-account/' + e.model.item.id);
       },
 
       _newBankAccountTapped: function (e) {
