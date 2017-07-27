@@ -22,6 +22,9 @@ Element for managing an owner&#39;s bank accounts
       .main-section {
         margin-top:20px;
       }
+      .new-account-container{
+        margin-bottom: 20px;
+      }
     </style>
 
     <ct-owners-api id="ownersApi"></ct-owners-api>
@@ -29,9 +32,9 @@ Element for managing an owner&#39;s bank accounts
     <div class="main-section">
       <div class="container-fluid">
 
-        <div class="row">
-          <div class="col-sm-2 bordered">
-            <paper-button class="btn btn-primary btn-block" on-tap="_newBankAccountTapped" raised>New Bank Account</paper-button>
+        <div class="row new-account-container">
+          <div class="col-sm-12">
+            <paper-button class="btn btn-primary" on-tap="_newBankAccountTapped" raised>New Bank Account</paper-button>
           </div>
         </div>
 
@@ -126,4 +129,3 @@ Element for managing an owner&#39;s bank accounts
   </script>
 
 </dom-module>
-
