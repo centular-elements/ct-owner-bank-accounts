@@ -4,7 +4,7 @@
 <link rel="import" href="../paper-input/paper-input.html">
 
 <link rel="import" href="../ct-core-utils/ct-api-consumer-behaviour.html">
-<link rel="import" href="../ct-owners-api/ct-owners-api.html">
+<link rel="import" href="../ct-bank-accounts-api/ct-bank-accounts-api.html">
 <!--
 `ct-owner-bank-accounts`
 Element for managing an owner&#39;s bank accounts
@@ -24,7 +24,7 @@ Element for managing an owner&#39;s bank accounts
       }
     </style>
 
-    <ct-owners-api id="ownersApi"></ct-owners-api>
+    <ct-bank-accounts-api id="bankAccountsApi"></ct-bank-accounts-api>
 
     <div class="main-section">
       <div class="container-fluid">
@@ -109,7 +109,7 @@ Element for managing an owner&#39;s bank accounts
       },
 
       _getBankAccounts: function() {
-        this.$.ownersApi.filterOwnerBankAccounts(this.ownerId)
+        this.$.bankAccountsApi.filterOwnerBankAccounts(this.ownerId)
                 .then(this._setPropertyResponseResults.bind(this, '_bankAccounts'))
                 .catch(this.fire.bind(this, 'toast', {message: 'Failed to load owner bank accounts', type: 'danger'}))
                 .finally(this.set.bind(this, 'refreshing', false));
